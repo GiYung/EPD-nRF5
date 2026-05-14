@@ -199,6 +199,7 @@ async function sendimg() {
   const canvasSize = document.getElementById('canvasSize').value;
   const ditherMode = document.getElementById('ditherMode').value;
   const epdDriverSelect = document.getElementById('epddriver');
+  document.getElementById('epddriver').value = '03';
   const selectedOption = epdDriverSelect.options[epdDriverSelect.selectedIndex];
 
   if (selectedOption.getAttribute('data-size') !== canvasSize) {
