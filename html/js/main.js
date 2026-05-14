@@ -328,8 +328,8 @@ async function preConnect() {
     resetVariables();
     try {
       bleDevice = await navigator.bluetooth.requestDevice({
-        optionalServices: ['62750001-d828-918d-fb46-b6c11c675aec'],
-        acceptAllDevices: true
+        filters: [{ name: 'NRF_EPD_98C6' }], // 특정 기기 이름으로 필터링
+        optionalServices: ['62750001-d828-918d-fb46-b6c11c675aec'],        
       });
     } catch (e) {
       console.error(e);
